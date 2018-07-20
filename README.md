@@ -13,6 +13,6 @@ the idea is injecting the img script in a form vulnerable to xss
 ### Remember 
 
  - update the URL value in var url = 'http://10.0.2.15:3000'
- - remove all the console.log from the img script. The y are there just for debugging purposes
+ - remove all the console.log from the img script. They are there just for debugging purposes
 
 
